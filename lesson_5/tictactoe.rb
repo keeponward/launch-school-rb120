@@ -133,6 +133,7 @@ class TTTGame
   COMPUTER_NAME = "IBM"
   DEFAULT_HUMAN_MARKER = 'X'
   COMPUTER_MARKER = 'O'
+
   FIRST_MOVE_PLAYER = 'player'
   FIRST_MOVE_COMPUTER = 'computer'
   FIRST_MOVE_CHOOSE = 'choose'
@@ -189,7 +190,7 @@ class TTTGame
   def pick_player_marker
     print "Pick a marker for the player (#{human.name}, default of X if return): "
     marker_choice = gets.chomp
-    return marker_choice == '' ? 'X' : marker_choice 
+    marker_choice = 'X' if marker_choice == ''
     puts "Player marker is: #{marker_choice}"
     return marker_choice
   end
