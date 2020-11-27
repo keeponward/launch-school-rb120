@@ -202,8 +202,6 @@ class TwentyOne
         puts "#{player.name} stays!"
         puts ""
         break
-        # elsif player.busted?
-        # break
       else
         # show update only for hit
         player.add_card(deck.deal_one)
@@ -221,13 +219,10 @@ class TwentyOne
     dealer.show_hand
 
     loop do
-      # if dealer.total >= 17 && !dealer.busted?
       if dealer.total >= 17
         puts "#{dealer.name} must stay!"
         puts ""
         break
-        # elsif dealer.busted?
-        # break
       else
         con = dealer.cards.size > 2 ? 'another' : 'a'
         dealer.add_card(deck.deal_one)
